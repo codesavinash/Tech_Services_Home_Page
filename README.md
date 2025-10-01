@@ -50,7 +50,7 @@ Optional: You can integrate JavaScript in the future for animations or additiona
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/codesavinash/Tech_Services_Home_Page.git
+https://github.com/codesavinash/Tech_Services_Home_Page.git
 
 ## Contributing
 
