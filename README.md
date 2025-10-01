@@ -51,3 +51,8 @@ Optional: You can integrate JavaScript in the future for animations or additiona
 
 ```bash
 git clone https://github.com/codesavinash/Tech_Services_Home_Page.git
+
+## Contributing
+
+Feel free to fork this repository, make improvements, and submit a pull request.  
+Whether it's enhancing the design, fixing bugs, or adding new features, your contributions are welcome!
