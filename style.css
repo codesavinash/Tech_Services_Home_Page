@@ -1,0 +1,239 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+.site-header {
+  background-image: url("header.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 400px;
+  position: relative;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+
+  
+}
+
+/* LOGO + TITLE */
+.logo {
+  display: flex;
+  gap: 15px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.site-title {
+  font-size: 56px;
+  font-weight: bold;
+  font-family: cursive;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    padding: 10px 15px;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  position: absolute;
+  top: 35px;
+  right: 30px;
+  display: flex;
+  gap: 20px;
+}
+.social-icons img {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.social-icons img:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+/* NAVIGATION */
+.nav-menu {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.nav-menu ul {
+  display: flex;
+  gap: 45px;
+  list-style: none;
+}
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  transition: color 0.3s ease;
+}
+.nav-menu a:hover {
+  color: #ffd700;
+}
+
+/* ABOUT SECTION */
+.about {
+  width: 100%;
+  padding: 60px 20px;
+  background-color: orange;
+  text-align: center;
+  font-family: "Kode Mono", monospace;
+}
+.about h2 {
+  font-family: "Bitcount Prop Single Ink", sans-serif;
+  font-size: 46px;
+  margin-bottom: 50px;
+  color: #333;
+  font-weight: normal;
+}
+.about p {
+  font-size: 20px;
+  max-width: 800px;
+  margin: 10px auto;
+  line-height: 1.6;
+}
+
+/* SERVICES SECTION */
+.services {
+  width: 100%;
+  padding: 60px 20px 80px 20px;
+  background: #f4f4f4;
+  text-align: center;
+}
+.services h2 {
+  font-family: "Bitcount Prop Single Ink", sans-serif;
+  font-size: 46px;
+  margin-bottom: 50px;
+  color: #333;
+  font-weight: normal;
+}
+.services-list {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.service-item {
+  flex: 1 1 300px;
+  max-width: 350px;
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+.service-item:hover {
+  transform: translateY(-10px);
+}
+/* Background colors */
+.item1 { background: #0073e6; }
+.item2 { background: #ff6600; }
+.item3 { background: #28a745; }
+
+.service-item h3 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.service-item ul { padding-left: 20px; }
+.service-item li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.service-item li::before {
+  content: "✓";
+  color: #ffd700;
+  margin-right: 10px;
+}
+
+/* TEAM SECTION */
+.team-section {
+  text-align: center;
+  padding: 80px 20px;
+  background: #f8f8f8;
+}
+.team-section h2 {
+  font-family: "Bitcount Prop Single Ink", sans-serif;
+  font-size: 46px;
+  margin-bottom: 50px;
+  color: #333;
+  font-weight: normal;
+}
+.team {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.team-member {
+  text-align: center;
+  width: 220px;
+}
+.team-member img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #ddd;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.team-member img:hover {
+  transform: scale(1.05);
+  border-color: #ffd700;
+}
+.team-member h3 {
+  margin-top: 15px;
+  font-size: 22px;
+  color: #333;
+}
+.team-member p {
+  font-size: 16px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* FOOTER */
+.footer {
+  background: #222;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: "Kode Mono", monospace;
+}
+
+.footer h3 {
+  font-family: "Bitcount Prop Single Ink", sans-serif;
+  font-size: 28px;
+  margin-bottom: 15px;
+  font-weight: normal;
+}
+
+.footer p, .footer a, .footer li {
+  color: #ccc;
+  font-size: 16px;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.footer-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.footer-nav a:hover {
+  color: #ffd700;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+}
