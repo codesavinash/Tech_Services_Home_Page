@@ -5,29 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Services</title>
     <link rel="stylesheet" href="style.css">
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons (Optional, if you want icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
    <!-- HEADER -->
    <header class="site-header">
-      <div class="logo">
-        <img src="assets/logo.png" alt="Company Logo" class="logo">
-      </div>
+      <div class="header-content">
+         <div class="logo-and-title">
+            <img src="assets/logo.png" alt="Company Logo" class="logo-img">
+            <div class="site-title-container">
+               <h1 class="site-title">Dream</h1>
+               <h1 class="site-title">Tech Services</h1>
+            </div>
+         </div>
 
-      <div class="site-title">
-         <h1 class="site-title">Dream</h1>
-         <h1 class="site-title">Tech Services</h1>
-      </div>
-
-      <!-- Social Media Icons -->
-      <div class="social-icons">
-        <a href="https://facebook.com" target="_blank"><img src="assets/facebook-1024-black.png" alt="Facebook"></a>
-        <a href="https://twitter.com" target="_blank"><img src="assets/twitter-1024-black.png" alt="Twitter"></a>
-        <a href="https://instagram.com" target="_blank"><img src="assets/instagram-1024-black.png" alt="Instagram"></a>
+         <!-- Social Media Icons -->
+         <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><img src="assets/facebook-1024-black.png" alt="Facebook"></a>
+            <a href="https://twitter.com" target="_blank"><img src="assets/twitter-1024-black.png" alt="Twitter"></a>
+            <a href="https://instagram.com" target="_blank"><img src="assets/instagram-1024-black.png" alt="Instagram"></a>
+         </div>
       </div>
 
       <!-- Navigation -->
@@ -36,7 +40,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
    </header>
@@ -109,22 +113,31 @@
           </div>
       </div>
    </section>
-    <section class="footer">
-        <ul>Contact Us
-            <li>Email:tech@gmail.com</li>
-            <li>Phone: +1 234 567 890</li>
-            <li>Address: 123 Tech Street, Silicon Valley, CA</li>
-        </ul>
-        <nav>
+
+   <!-- CONTACT SECTION -->
+   <section class="contact-section" id="contact">
+       <h2>Contact Us</h2>
+       <div class="contact-info">
+           <p><i class="fas fa-envelope"></i> Email: tech@gmail.com</p>
+           <p><i class="fas fa-phone"></i> Phone: +1 234 567 890</p>
+           <p><i class="fas fa-map-marker-alt"></i> Address: 123 Tech Street, Silicon Valley, CA</p>
+       </div>
+       <!-- You can add a contact form here later if needed -->
+   </section>
+
+   <!-- FOOTER -->
+   <footer class="footer">
+      <div class="footer-nav">
+        <h3>Quick Links</h3>
         <ul>
-          <li><a href="index.html"></a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#team">Team</a></li>
-        </nav>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
       <p>&copy; 2025 Tech Services. All rights reserved.</p>
-
-
-    </section>
+   </footer>
 </body>
 </html>

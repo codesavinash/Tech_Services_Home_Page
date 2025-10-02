@@ -5,6 +5,38 @@
   box-sizing: border-box;
 }
 
+/* GENERAL STYLES */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+h2 {
+  font-family: "Bitcount Prop Single Ink", sans-serif;
+  font-size: 46px;
+  margin-bottom: 50px;
+  color: #333;
+  font-weight: normal;
+  text-align: center; /* Ensure headings are centered */
+}
+
+p {
+  font-size: 18px; /* Slightly adjusted for better readability */
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* Inherit color by default */
+  transition: color 0.3s ease;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 /* HEADER */
 .site-header {
   background-image: url("header1.png");
@@ -16,37 +48,50 @@
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  display: flex; /* Use flexbox for better alignment */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: space-between; /* Distribute space between header content and nav */
+  align-items: center; /* Center items horizontally */
+  padding-top: 20px; /* Add some padding at the top */
+  padding-bottom: 100px; /* Add more padding at the bottom for nav */
+}
 
-  
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Limit content width */
+  padding: 0 20px; /* Add horizontal padding */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 20px; /* Add gap between logo/title and social icons */
 }
 
 /* LOGO + TITLE */
-.logo {
+.logo-and-title {
   display: flex;
-  gap: 1px;
-  padding-left: 20px;
-  padding-top: 5px;
-  padding-bottom: 0px;
-  width: 35%;
-
-
+  align-items: center;
+  gap: 15px; /* Adjusted gap */
+}
+.logo-img { /* Renamed class for clarity */
+  width: 80px; /* Adjusted size */
+  height: auto; /* Maintain aspect ratio */
+}
+.site-title-container { /* Container for titles */
+  display: flex;
+  flex-direction: column;
 }
 .site-title {
   color: ivory;
-  font-size: 50px;
+  font-size: 40px; /* Adjusted size */
   font-weight: bold;
-  font-family: cursive;
+  font-family: cursive; /* Keep cursive for titles */
   text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-  padding-top: 1px;
-  padding-left: 10px;
-  padding-bottom: 1px;
+  line-height: 1.1; /* Adjust line height for titles */
 }
 
 /* SOCIAL ICONS */
 .social-icons {
-  position: absolute;
-  top: 35px;
-  right: 30px;
   display: flex;
   gap: 20px;
 }
@@ -62,7 +107,7 @@
 
 /* NAVIGATION */
 .nav-menu {
-  position: absolute;
+  position: absolute; /* Position relative to header */
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
@@ -80,42 +125,42 @@
   transition: color 0.3s ease;
 }
 .nav-menu a:hover {
-  color: #ffd700;
+  color: #ffd700; /* Gold color for hover */
 }
 
 /* ABOUT SECTION */
 .about {
   width: 100%;
-  padding: 60px 20px;
+  padding: 80px 20px; /* Increased padding */
   background-color: ivory;
   text-align: center;
-  font-family: "Kode Mono", monospace;
+  font-family: "Kode Mono", monospace; /* Font for paragraphs */
 }
 .about h2 {
-  font-family: "Bitcount Prop Single Ink", sans-serif;
+  font-family: "Bitcount Prop Single Ink", sans-serif; /* Font for section title */
   font-size: 46px;
-  margin-bottom: 50px;
+  margin-bottom: 40px; /* Reduced margin */
   color: #333;
   font-weight: normal;
 }
 .about p {
   font-size: 20px;
   max-width: 800px;
-  margin: 10px auto;
-  line-height: 1.6;
+  margin: 15px auto; /* Adjusted margin */
+  line-height: 1.7; /* Increased line height */
 }
 
 /* SERVICES SECTION */
 .services {
   width: 100%;
-  padding: 60px 20px 80px 20px;
-  background: #98d8c9;
+  padding: 80px 20px 100px 20px; /* Increased padding */
+  background: #98d8c9; /* Teal-ish background */
   text-align: center;
 }
 .services h2 {
   font-family: "Bitcount Prop Single Ink", sans-serif;
   font-size: 46px;
-  margin-bottom: 50px;
+  margin-bottom: 60px; /* Increased margin */
   color: #333;
   font-weight: normal;
 }
@@ -124,51 +169,59 @@
   gap: 30px;
   justify-content: center;
   flex-wrap: wrap;
+  max-width: 1200px; /* Limit width */
+  margin: 0 auto; /* Center the list */
 }
 .service-item {
   flex: 1 1 300px;
   max-width: 350px;
-  padding: 20px;
+  padding: 30px; /* Increased padding */
   border-radius: 12px;
   color: white;
   text-align: left;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Softer shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow to transition */
 }
 .service-item:hover {
   transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* More pronounced shadow on hover */
 }
 /* Background colors */
-.item1 { background: #0073e6; }
-.item2 { background: #ff6600; }
-.item3 { background: #28a745; }
+.item1 { background: #0073e6; } /* Blue */
+.item2 { background: #ff6600; } /* Orange */
+.item3 { background: #28a745; } /* Green */
 
 .service-item h3 {
-  font-size: 24px;
+  font-size: 26px; /* Increased font size */
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px; /* Adjusted margin */
+  font-family: "Bitcount Prop Single Ink", sans-serif; /* Consistent title font */
 }
-.service-item ul { padding-left: 20px; }
+.service-item ul {
+  padding-left: 25px; /* Increased padding */
+}
 .service-item li {
-  margin-bottom: 10px;
-  font-size: 18px;
+  margin-bottom: 12px; /* Adjusted margin */
+  font-size: 18px; /* Slightly larger font */
+  font-family: "Kode Mono", monospace; /* Consistent paragraph font */
 }
 .service-item li::before {
-  content: "✓";
-  color: #ffd700;
-  margin-right: 10px;
+  content: "✓"; /* Checkmark icon */
+  color: #ffd700; /* Gold color */
+  margin-right: 12px; /* Adjusted margin */
+  font-weight: bold; /* Make checkmark bolder */
 }
 
 /* TEAM SECTION */
 .team-section {
   text-align: center;
   padding: 80px 20px;
-  background: #63c89f;
+  background: #63c89f; /* Lighter green */
 }
 .team-section h2 {
   font-family: "Bitcount Prop Single Ink", sans-serif;
   font-size: 46px;
-  margin-bottom: 50px;
+  margin-bottom: 60px; /* Increased margin */
   color: #333;
   font-weight: normal;
 }
@@ -177,6 +230,8 @@
   justify-content: center;
   gap: 50px;
   flex-wrap: wrap;
+  max-width: 1200px; /* Limit width */
+  margin: 0 auto; /* Center the team members */
 }
 .team-member {
   text-align: center;
@@ -185,31 +240,67 @@
 .team-member img {
   width: 200px;
   height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 5px solid #ddd;
+  object-fit: cover; /* Ensures image covers the area */
+  border-radius: 50%; /* Makes the image round */
+  border: 5px solid #ddd; /* Light grey border */
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
 .team-member img:hover {
-  transform: scale(1.05);
-  border-color: #ffd700;
+  transform: scale(1.05); /* Slight zoom on hover */
+  border-color: #ffd700; /* Gold border on hover */
 }
 .team-member h3 {
   margin-top: 15px;
   font-size: 22px;
   color: #333;
+  font-family: "Bitcount Prop Single Ink", sans-serif; /* Consistent title font */
 }
 .team-member p {
   font-size: 16px;
   color: #666;
   margin-top: 5px;
+  font-family: "Kode Mono", monospace; /* Consistent paragraph font */
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  padding: 80px 20px;
+  background-color: #f4f4f4; /* Light grey background */
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-family: "Bitcount Prop Single Ink", sans-serif;
+  font-size: 46px;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: normal;
+}
+
+.contact-info {
+  display: inline-block; /* To center block elements */
+  text-align: left;
+  font-size: 18px;
+  font-family: "Kode Mono", monospace;
+}
+
+.contact-info p {
+  margin-bottom: 15px;
+  display: flex; /* Align icon with text */
+  align-items: center;
+  gap: 15px; /* Space between icon and text */
+}
+
+.contact-info i {
+  color: #0073e6; /* Blue icon color */
+  font-size: 22px; /* Larger icon */
 }
 
 /* FOOTER */
 .footer {
-  background: #222;
-  color: white;
-  padding: 40px 20px;
+  background: #222; /* Dark background */
+  color: #ccc; /* Light grey text */
+  padding: 50px 20px; /* Increased padding */
   text-align: center;
   font-family: "Kode Mono", monospace;
 }
@@ -217,15 +308,9 @@
 .footer h3 {
   font-family: "Bitcount Prop Single Ink", sans-serif;
   font-size: 28px;
-  margin-bottom: 15px;
+  margin-bottom: 20px; /* Increased margin */
   font-weight: normal;
-}
-
-.footer p, .footer a, .footer li {
-  color: #ccc;
-  font-size: 16px;
-  line-height: 1.6;
-  text-decoration: none;
+  color: white; /* Make footer heading white */
 }
 
 .footer-nav ul {
@@ -235,12 +320,85 @@
   list-style: none;
   margin: 20px 0;
   padding: 0;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.footer-nav a {
+  color: #ccc;
+  font-size: 18px; /* Slightly larger font */
+  text-decoration: none;
 }
 
 .footer-nav a:hover {
-  color: #ffd700;
+  color: #ffd700; /* Gold on hover */
 }
 
-.footer-contact p {
-  margin: 5px 0;
+.footer p {
+  font-size: 16px;
+  margin-top: 30px; /* Space above copyright */
+  color: #aaa; /* Slightly muted copyright text */
+}
+
+/* RESPONSIVE ADJUSTMENTS (Example for smaller screens) */
+@media (max-width: 768px) {
+  .site-header {
+    height: auto; /* Adjust height for responsiveness */
+    padding-bottom: 80px; /* Reduce padding */
+  }
+
+  .header-content {
+    flex-direction: column; /* Stack logo/title and social icons */
+    text-align: center;
+  }
+
+  .logo-and-title {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .logo-img {
+    width: 60px;
+  }
+
+  .site-title {
+    font-size: 35px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .nav-menu {
+    position: static; /* Make nav static */
+    transform: none;
+    margin-top: 20px;
+  }
+  .nav-menu ul {
+    flex-direction: column; /* Stack nav items */
+    gap: 15px;
+  }
+
+  .about h2, .services h2, .team-section h2, .contact-section h2 {
+    font-size: 36px;
+  }
+
+  .services-list, .team, .footer-nav ul {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+  }
+
+  .service-item, .team-member, .footer-nav li {
+    width: 90%; /* Take up more width */
+    max-width: 350px; /* Keep max width */
+  }
+
+  .contact-info {
+    width: 90%;
+    text-align: center;
+    font-size: 16px;
+  }
+  .contact-info p {
+      justify-content: center;
+  }
 }
