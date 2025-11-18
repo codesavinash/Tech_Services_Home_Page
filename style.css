@@ -175,6 +175,13 @@ ul {
   animation: fadeInDown 1s ease;
 }
 
+.logo-container a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .site-header.sticky .logo-container {
   align-items: flex-start;
   padding-top: 0;
