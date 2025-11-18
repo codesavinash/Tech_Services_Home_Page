@@ -6,7 +6,7 @@ A responsive landing page for a Tech Services company showcasing About, Services
 
 ## Table of Contents
 
-- [Demo](#demo)  
+- [Demo] https://codesavinash.github.io/Tech_Services_Home_Page/
 - [Features](#features)  
 - [Technologies Used](#technologies-used)  
 - [Installation](#installation)  
