@@ -17,7 +17,7 @@ A responsive landing page for a Tech Services company showcasing About, Services
 
 ## Demo
 
-![Screenshot](assets/web4.1.png.png)  
+![Screenshot](assets/web4.1.png)  
 
 
 ---
