@@ -347,6 +347,7 @@ ul {
   text-align: center;
   position: relative;
   overflow: hidden;
+  scroll-margin-top: 120px;
 }
 
 .about::before {
@@ -394,6 +395,7 @@ ul {
   text-align: center;
   position: relative;
   overflow: hidden;
+  scroll-margin-top: 120px;
 }
 
 .services::before {
@@ -525,6 +527,7 @@ ul {
   background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
   position: relative;
   overflow: hidden;
+  scroll-margin-top: 120px;
 }
 
 .team-section::before {
@@ -613,51 +616,331 @@ ul {
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   text-align: center;
   position: relative;
+  scroll-margin-top: 120px;
 }
 
-.contact-info {
-  display: inline-block;
-  text-align: left;
+.contact-container {
+  display: grid;
+  grid-template-columns: 30% 55%;
+  gap: var(--spacing-lg);
+  max-width: 1400px;
+  margin: var(--spacing-lg) auto 0;
+  align-items: stretch;
+  justify-content: center;
+}
+
+/* Contact Info Card */
+.contact-info-card {
   background: var(--glass-bg);
   backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
   border-radius: 20px;
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md);
   box-shadow: var(--shadow-lg);
-  max-width: 600px;
-  margin: 0 auto;
+  text-align: left;
   opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.8s ease forwards;
+  transform: translateX(-30px);
+  animation: fadeInLeft 0.8s ease forwards;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 550px;
 }
 
-.contact-info p {
-  margin-bottom: var(--spacing-md);
+.contact-info-card h3 {
+  font-family: "Bitcount Prop Single Ink", sans-serif;
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+  text-align: center;
+}
+
+.contact-description {
+  font-family: "Kode Mono", monospace;
+  font-size: clamp(0.9rem, 1vw, 0.95rem);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.contact-info {
+  margin-bottom: var(--spacing-sm);
+  flex: 1;
+  overflow-y: auto;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 12px;
+  transition: all var(--transition-base);
+}
+
+.contact-item:hover {
+  background: rgba(79, 172, 254, 0.05);
+  transform: translateX(5px);
+}
+
+.contact-icon {
+  width: 45px;
+  height: 45px;
   display: flex;
   align-items: center;
-  gap: var(--spacing-md);
-  font-size: clamp(1rem, 1.2vw, 1.125rem);
-  font-family: "Kode Mono", monospace;
-  color: var(--text-primary);
+  justify-content: center;
+  background: var(--accent-gradient);
+  border-radius: 50%;
+  color: var(--text-light);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
 }
 
-.contact-info i {
-  color: var(--accent-blue);
-  font-size: 1.5rem;
+.contact-item:hover .contact-icon {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: var(--shadow-lg);
+}
+
+.contact-details h4 {
+  font-family: "Bitcount Prop Single Ink", sans-serif;
+  font-size: clamp(0.95rem, 1.1vw, 1rem);
+  color: var(--text-primary);
+  margin-bottom: 2px;
+  font-weight: 600;
+}
+
+.contact-details p {
+  font-family: "Kode Mono", monospace;
+  font-size: clamp(0.85rem, 0.95vw, 0.9rem);
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.social-links-contact {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  padding-top: var(--spacing-xs);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: auto;
+}
+
+.social-links-contact a {
   width: 40px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(79, 172, 254, 0.1);
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
   border-radius: 50%;
+  color: var(--accent-blue);
+  font-size: 1.1rem;
   transition: all var(--transition-base);
 }
 
-.contact-info p:hover i {
+.social-links-contact a:hover {
   background: var(--accent-gradient);
   color: var(--text-light);
-  transform: scale(1.1) rotate(5deg);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: var(--shadow-md);
+}
+
+/* Contact Form Card */
+.contact-form-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  transform: translateX(30px);
+  animation: fadeInRight 0.8s ease forwards;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 550px;
+}
+
+.contact-form-card h3 {
+  font-family: "Bitcount Prop Single Ink", sans-serif;
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.contact-form::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-family: "Kode Mono", monospace;
+  font-size: clamp(0.9rem, 1vw, 0.95rem);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.form-group label i {
+  color: var(--accent-blue);
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  font-family: "Kode Mono", monospace;
+  font-size: clamp(0.9rem, 1vw, 0.95rem);
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.5);
+  transition: all var(--transition-base);
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent-blue);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.1);
+  transform: translateY(-2px);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 70px;
+  max-height: 90px;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.75rem;
+  font-family: "Kode Mono", monospace;
+  margin-top: 2px;
+  min-height: 18px;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.error-message.show {
+  opacity: 1;
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border-color: #e74c3c;
+  background: rgba(231, 76, 60, 0.05);
+}
+
+.form-group input.success,
+.form-group textarea.success {
+  border-color: #27ae60;
+  background: rgba(39, 174, 96, 0.05);
+}
+
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-md);
+  background: var(--accent-gradient);
+  color: var(--text-light);
+  border: none;
+  border-radius: 12px;
+  font-family: "Kode Mono", monospace;
+  font-size: clamp(0.95rem, 1.1vw, 1rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-md);
+  margin-top: var(--spacing-xs);
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  background: linear-gradient(135deg, #3d8bfe 0%, #00d4fe 100%);
+}
+
+.submit-btn:active {
+  transform: translateY(-1px);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.submit-btn i {
+  transition: transform var(--transition-base);
+}
+
+.submit-btn:hover i {
+  transform: translateX(5px);
+}
+
+.form-message {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 10px;
+  text-align: center;
+  font-family: "Kode Mono", monospace;
+  font-size: clamp(0.85rem, 0.95vw, 0.9rem);
+  margin-top: var(--spacing-xs);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all var(--transition-base);
+}
+
+.form-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.form-message.success {
+  background: rgba(39, 174, 96, 0.1);
+  color: #27ae60;
+  border: 1px solid rgba(39, 174, 96, 0.3);
+}
+
+.form-message.error {
+  background: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+  border: 1px solid rgba(231, 76, 60, 0.3);
 }
 
 /* ============================================
@@ -908,14 +1191,15 @@ ul {
     grid-template-columns: 1fr;
   }
 
-  .contact-info {
-    width: 100%;
-    text-align: center;
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
   }
 
-  .contact-info p {
-    justify-content: center;
-    flex-wrap: wrap;
+  .contact-info-card,
+  .contact-form-card {
+    transform: none;
+    animation: fadeInUp 0.8s ease forwards;
   }
 
   .footer-nav ul {
